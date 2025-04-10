@@ -24,6 +24,14 @@ print(diccionario['edad'])
 diccionario['edad'] = 45
 print(diccionario)
 
+# TUPLA, colección INMUTABLE de elementos
+tupla = ("Erick Bailey", 49, True)
+print(tupla)
+print(type(tupla))
+
+#tupla[2]=45
+print(tupla[2])
+
 # CONJUNTOS, colección desordenada de elementos
 conjunto = {"Erick Bailey", 49, True}
 print(conjunto)
@@ -35,11 +43,3 @@ conjunto.pop()
 print(conjunto)
 conjunto.pop()
 print(conjunto)
-
-# TUPLA, colección INMUTABLE de elementos
-tupla = ("Erick Bailey", 49, True)
-print(tupla)
-print(type(tupla))
-
-#tupla[2]=45
-print(tupla[2])
