@@ -46,3 +46,12 @@ def calculadora(a,b,op):
 
 # Ejecución función calculadora
 calculadora(num_1, num_2, operacion)
+
+# Ejercicio 4
+# Definición de variables
+lado = float(input("Ingrese la medida de su lado"))
+
+def area_cuadrado(a):
+    print(f"El área de su cuadrado de lado {a}= {a*a}")
+
+area_cuadrado(lado)
