@@ -27,22 +27,22 @@ num_2 = float(input("Ingrese su segundo número: "))
 operacion = input("Ingrese su operación: ")
 
 # Definición función calculadora
-def calculadora(a,b,op):
-    resultado = 0
+# def calculadora(a,b,op):
+#     resultado = 0
     
-    if op == "+":
-        resultado = a + b
-    elif op == "*":
-        resultado = a * b
-    elif op == "-":
-        resultado = a - b
-    elif op == "/":
-        if num_2 == 0:
-            print("Operación Indefinida...")
-            return
-        else:
-            resultado = a / b
-    print(f"El resultado de {a}{op}{b} = {resultado}")
+#     if op == "+":
+#         resultado = a + b
+#     elif op == "*":
+#         resultado = a * b
+#     elif op == "-":
+#         resultado = a - b
+#     elif op == "/":
+#         if b == 0:
+#             print("Operación Indefinida...")
+#             return
+#         else:
+#             resultado = a / b
+#     print(f"El resultado de {a}{op}{b} = {resultado}")
 
 # Ejecución función calculadora
 calculadora(num_1, num_2, operacion)
