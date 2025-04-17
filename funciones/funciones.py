@@ -45,7 +45,7 @@ operacion = input("Ingrese su operación: ")
 #     print(f"El resultado de {a}{op}{b} = {resultado}")
 
 # Ejecución función calculadora
-calculadora(num_1, num_2, operacion)
+#calculadora(num_1, num_2, operacion)
 
 # Ejercicio 4
 # Definición de variables
