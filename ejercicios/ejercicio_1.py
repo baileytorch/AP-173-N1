@@ -21,29 +21,29 @@ def convertidor_temp(temperatura, inicio, fin):
     
     if inicio == "K":
         if fin == "C":
-            pass
+            resultado = temperatura - 273.15
         elif fin == "F":
-            pass
+            resultado = ((temperatura - 273.15) * 9/5) + 32
         else:
             print("Escala final errónea")
     elif inicio == "C":
         if fin == "K":
-            pass
+            resultado = temperatura + 273.15
         elif fin == "F":
-            pass
+            resultado = (temperatura * 9/5) + 32
         else:
             print("Escala final errónea")
     elif inicio == "F":
         if fin == "K":
-            pass
+            resultado = (temperatura -32) * 5/9 + 273.15
         elif fin == "C":
-            pass
+            resultado = (temperatura -32) * 5/9
         else:
             print("Escala final errónea")
     else:
             print("Escala inicial errónea")
     
-    print(resultado)
+    print(f"{temperatura}°{inicio} = {resultado}°{fin}")
 
 temp = float(input("Ingrese su temperatura a convertir: "))
 escala_inicial = input("Indique escala inicial: C, F o K: ").upper().strip()
