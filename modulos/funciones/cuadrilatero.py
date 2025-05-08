@@ -1,10 +1,10 @@
 # Definir 3 funciones... Cálculo de perímetro, área y volumen...
 
-def perimetro(ancho,largo):
+def perimetro_cuad(ancho,largo):
     return ancho + largo * 2
 
-def area(ancho,largo):
+def area_cuad(ancho,largo):
     return ancho * largo
 
-def volumen(ancho,largo,alto):
+def volumen_cuad(ancho,largo,alto):
     return ancho * largo * alto
