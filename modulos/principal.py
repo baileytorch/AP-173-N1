@@ -37,7 +37,8 @@ def programa_principal():
                 print(f"Perímetro: {perimetro_circ(radio)}")
 
             elif opcion_sub_menu == "0":
-                return
+                print("Volviendo al menú principal...")
+                menu()
             else:
                 print("Opción Inválida!")
 
