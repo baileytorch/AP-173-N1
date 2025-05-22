@@ -30,22 +30,58 @@ def programa_principal():
             if opcion_sub_menu == "1":
                 ancho = float(input("Ingrese el ancho: "))
                 largo = float(input("Ingrese el largo: "))
-                print(f"Perímetro: {perimetro_cuad(ancho,largo)}")
+                print(f"Perímetro de Cuadrilatero de Lados {ancho} y {largo}= {perimetro_cuad(ancho,largo)}")
                 
             elif opcion_sub_menu == "2":
                 radio = float(input("Ingrese el radio: "))
-                print(f"Perímetro: {perimetro_circ(radio)}")
+                print(f"Perímetro de Circunferencia de radio {radio}= {perimetro_circ(radio)}")
 
             elif opcion_sub_menu == "0":
                 print("Volviendo al menú principal...")
                 menu()
             else:
                 print("Opción Inválida!")
+                break
 
         elif opcion == "2":
-            pass
+            sub_menu()
+            opcion_sub_menu = input("Seleccione su opción (0-3): ")
+            
+            if opcion_sub_menu == "1":
+                ancho = float(input("Ingrese el ancho: "))
+                largo = float(input("Ingrese el largo: "))
+                print(f"Área de Cuadrilatero de Lados {ancho} y {largo}= {area_cuad(ancho,largo)}")
+                
+            elif opcion_sub_menu == "2":
+                radio = float(input("Ingrese el radio: "))
+                print(f"Área Circunferencia de radio {radio}= {area_circ(radio)}")
+
+            elif opcion_sub_menu == "0":
+                return
+            else:
+                print("Opción Inválida!")
+                return
+
         elif opcion == "3":
-            pass
+            sub_menu()
+            opcion_sub_menu = input("Seleccione su opción (0-3): ")
+            
+            if opcion_sub_menu == "1":
+                ancho = float(input("Ingrese el ancho: "))
+                largo = float(input("Ingrese el largo: "))
+                alto = float(input("Ingrese el alto: "))
+                print(f"Volumen de Cubo de Lados {ancho}, {largo} y {alto}= {volumen_cuad(ancho,largo,alto)}")
+                
+            elif opcion_sub_menu == "2":
+                radio = float(input("Ingrese el radio: "))
+                print(f"Área de Esfera de radio {radio}= {volumen_circ(radio)}")
+
+            elif opcion_sub_menu == "0":
+                return
+            else:
+                print("Opción Inválida!")
+                break
+
         elif opcion == "0":
             print("saliendo del sistema...")
             break
