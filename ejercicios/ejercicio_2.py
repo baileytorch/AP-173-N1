@@ -10,6 +10,10 @@
     
 # print(lista_peliculas[2])
 
+# print(len('DOTA'))
+# print(len(range(10)))
+# print(len(range(3,7)))
+
 lista_estudiantes = [
     ['Aquiles Baeza',[6.5,5.7,6.3]],
     ['Wendy Sulca',[5.0,4.7,5.8]],
@@ -17,6 +21,7 @@ lista_estudiantes = [
     ['Delfin Quispe',[4.3,3.8,2.9]]
 ]
 
+rango = [0,1,2]
 for estudiante in lista_estudiantes:
     suma = 0
     for i in range(len(estudiante[1])):
