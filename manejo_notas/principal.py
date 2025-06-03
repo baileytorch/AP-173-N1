@@ -1,43 +1,44 @@
-from data.asignaturas import lista_asignaturas
+from data.asignaturas import asignaturas
+from data.crear_data import crear_data
 import os
 
+# READ
 def mostrar_listado_asignaturas():
     print()
     print('Listado de Asignaturas')
     print('======================')
     contador = 0
-    for asignatura in sorted(lista_asignaturas):
+    for asignatura in sorted(asignaturas):
         contador += 1
         print(f'{contador}.- {asignatura}')
 
+# READ
 def buscar_asignatura():
     busqueda = input('Ingrese asignatura a buscar: ')
-    for asignatura in lista_asignaturas:
+    for asignatura in asignaturas:
         if busqueda.lower() in asignatura.lower():
             return asignatura
 
+# CREATE
 def agregar_asignatura():
     mostrar_listado_asignaturas()
     nueva_asignatura = input('Ingrese nueva asignatura: ')
-    lista_asignaturas.append(nueva_asignatura.title())
+    asignaturas.append(nueva_asignatura.title())
 
-    nombre_archivo = 'asignaturas.py'
-    ruta_relativa = os.path.join('manejo_notas/data', nombre_archivo)
-    ruta_absoluta = os.path.abspath(ruta_relativa)
-    ruta_real = os.path.realpath(ruta_absoluta)
-    archivo_final = open(ruta_real,'w+')
-    archivo_final.write(f'asignaturas={lista_asignaturas}')
-    archivo_final.close()
+    crear_data('asignaturas.py','asignaturas',asignaturas)
 
     mostrar_listado_asignaturas()
-    
+
+# UPDATE  
 def actualizar_asignatura():
     mostrar_listado_asignaturas()
     busqueda = input('Ingrese asignatura a buscar: ')
-    for i in range(len(lista_asignaturas)):
-        if busqueda.lower() in lista_asignaturas[i].lower():
-            nuevo_dato = input(f'Ingrese nuevo nombre para asignatura {lista_asignaturas[i]}: ')
-            lista_asignaturas[i] = nuevo_dato
+    for i in range(len(asignaturas)):
+        if busqueda.lower() in asignaturas[i].lower():
+            nuevo_dato = input(f'Ingrese nuevo nombre para asignatura {asignaturas[i]}: ')
+            asignaturas[i] = nuevo_dato    
+
+    crear_data('asignaturas.py','asignaturas',asignaturas)
     mostrar_listado_asignaturas()
 
-agregar_asignatura()
+actualizar_asignatura()
