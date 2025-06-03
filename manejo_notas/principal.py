@@ -1,4 +1,4 @@
-lista_asignaturas = ['Biología','Química','Física']
+from data.asignaturas import lista_asignaturas
 
 def mostrar_listado_asignaturas():
     print()
@@ -30,5 +30,4 @@ def actualizar_asignatura():
             lista_asignaturas[i] = nuevo_dato
     mostrar_listado_asignaturas()
 
-actualizar_asignatura()
-    
+agregar_asignatura()

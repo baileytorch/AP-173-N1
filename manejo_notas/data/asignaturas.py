@@ -1,0 +1,1 @@
+lista_asignaturas = ['Biología','Química','Física']
