@@ -1,4 +1,5 @@
 from data.asignaturas import lista_asignaturas
+import os
 
 def mostrar_listado_asignaturas():
     print()
@@ -19,6 +20,15 @@ def agregar_asignatura():
     mostrar_listado_asignaturas()
     nueva_asignatura = input('Ingrese nueva asignatura: ')
     lista_asignaturas.append(nueva_asignatura.title())
+
+    nombre_archivo = 'asignaturas.py'
+    ruta_relativa = os.path.join('manejo_notas/data', nombre_archivo)
+    ruta_absoluta = os.path.abspath(ruta_relativa)
+    ruta_real = os.path.realpath(ruta_absoluta)
+    archivo_final = open(ruta_real,'w+')
+    archivo_final.write(f'asignaturas={lista_asignaturas}')
+    archivo_final.close()
+
     mostrar_listado_asignaturas()
     
 def actualizar_asignatura():

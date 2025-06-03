@@ -1,1 +1,1 @@
-lista_asignaturas = ['Biología','Química','Física']
+asignaturas=['Biologia', 'Quimica', 'Fisica', 'Matematicas']
