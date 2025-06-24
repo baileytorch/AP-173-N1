@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS asignaturas(
     id INT NOT NULL AUTO_INCREMENT,
     codigo_asignatura VARCHAR(12) NOT NULL,
     nombre_asignatura VARCHAR(250) NOT NULL,
-    descripcion-asignatura VARCHAR(250) NULL,
+    descripcion_asignatura VARCHAR(250) NULL,
 
     CONSTRAINT pk_asignaturas PRIMARY KEY (id)
 );
