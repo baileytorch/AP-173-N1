@@ -1,5 +1,6 @@
 from data.asignaturas import asignaturas
 from data.crear_data import crear_data
+from data.conexion import ejecutar_consulta
 import os
 
 # READ
@@ -8,7 +9,8 @@ def mostrar_listado_asignaturas():
     print('Listado de Asignaturas')
     print('======================')
     contador = 0
-    for asignatura in sorted(asignaturas):
+    listado_asignaturas = ejecutar_consulta('SELECT * FROM asignaturas')
+    for asignatura in listado_asignaturas:
         contador += 1
         print(f'{contador}.- {asignatura}')
 
