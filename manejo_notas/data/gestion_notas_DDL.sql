@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS docentes_asignaturas(
 CREATE TABLE IF NOT EXISTS opciones_menu(
     id INT NOT NULL AUTO_INCREMENT,
     opcion_menu VARCHAR(250) NOT NULL,
+    numero_opcion VARCHAR(2) NOT NULL,
 
     CONSTRAINT pk_opciones_menu PRIMARY KEY (id)
 );

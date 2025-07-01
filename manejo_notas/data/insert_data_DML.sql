@@ -9,6 +9,7 @@ INSERT INTO asignaturas (codigo_asignatura,nombre_asignatura) VALUES
 ('FIS','Física General'),
 ('QUI','Química Inorgánica');
 
-INSERT INTO opciones_menu (opcion_menu) VALUES
-('Gestión Asignaturas'),
-('Gestión Docentes');
+INSERT INTO opciones_menu (opcion_menu,numero_opcion) VALUES
+('Gestión Asignaturas','1'),
+('Gestión Docentes','2'),
+('Salir','0');
