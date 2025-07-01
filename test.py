@@ -11,3 +11,19 @@ lista_comidas[2] = 'Empanadas fritas'
 print(lista_comidas)
 for i in range(5):
     print(i)
+
+def division(a,b):
+    resultado = a/b
+    return resultado
+
+numero1_str = input('Ingrese número:')
+numero2_str = input('Ingrese número:')
+numero1 = 0
+numero2 = 0
+
+if numero1_str.isdigit():
+    numero1 = int(numero1_str)
+if numero2_str.isdigit():
+    numero2 = int(numero2_str)
+
+division(numero1,numero2)

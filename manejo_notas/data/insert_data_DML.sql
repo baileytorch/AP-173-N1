@@ -8,3 +8,7 @@ INSERT INTO asignaturas (codigo_asignatura,nombre_asignatura) VALUES
 ('BIO','Biología'),
 ('FIS','Física General'),
 ('QUI','Química Inorgánica');
+
+INSERT INTO opciones_menu (opcion_menu) VALUES
+('Gestión Asignaturas'),
+('Gestión Docentes');
