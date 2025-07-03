@@ -27,3 +27,18 @@ if numero2_str.isdigit():
     numero2 = int(numero2_str)
 
 division(numero1,numero2)
+
+cadena_test = '''
+Mi corazón, ni una ni dos veces se rompió.
+Sus bolsillos se vaciaron por las necesidades de ambos.
+Un control lo suficientemente fuerte no podría contener sus finanzas.
+Sobre la dignidad o la luz que una vez hubo en mi alma
+Desde la primera compra mi corazón no aprendió
+Tomó prestado de otros lugares para poder ganar dinero.
+El precio que pediste a cambio por tu amor.
+El precio que pediste a cambio por tu amor.
+Mi corazón, ni una ni dos veces se rompió.
+En quiebra, agotados, sólo entonces para tomar nota
+Que por error había utilizado mala economía
+En la compra del amor, que debería haber venido gratis
+'''

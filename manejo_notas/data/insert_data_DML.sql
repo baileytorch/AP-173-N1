@@ -9,7 +9,17 @@ INSERT INTO asignaturas (codigo_asignatura,nombre_asignatura) VALUES
 ('FIS','Física General'),
 ('QUI','Química Inorgánica');
 
-INSERT INTO opciones_menu (opcion_menu,numero_opcion) VALUES
-('Gestión Asignaturas','1'),
-('Gestión Docentes','2'),
-('Salir','0');
+INSERT INTO opciones_menu (opcion_menu,numero_opcion,tipo_menu) VALUES
+('Gestión Asignaturas','1',1),
+('Gestión Docentes','2',1),
+('Salir','0',1),
+('Listado Asignaturas','1',2),
+('Agregar Asignatura','2',2),
+('Editar Asignaturas','1',2),
+('Eliminar Asignatura','2',2),
+('Salir','0',2),
+('Listado Docentes','1',3),
+('Agregar Docente','2',3),
+('Editar Docente','1',3),
+('Eliminar Docente','2',3),
+('Salir','0',3);
