@@ -3,9 +3,14 @@ from prettytable import PrettyTable
 
 # READ
 def menu_principal():
+    script_sql = '''
+        SELECT numero_opcion,opcion_menu 
+        FROM opciones_menu
+        WHERE tipo_menu = 1
+    '''
     print()
     print('SISTEMA DE GESTIÓN ASIGNATURAS')
-    opciones_menu = ejecutar_consulta('SELECT numero_opcion,opcion_menu FROM opciones_menu')
+    opciones_menu = ejecutar_consulta(script_sql)
     tabla_menu = PrettyTable()
     tabla_menu.field_names = ['Id','Opción']
     for asignatura in opciones_menu:
