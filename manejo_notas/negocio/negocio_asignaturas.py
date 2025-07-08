@@ -1,18 +1,27 @@
 from data.asignaturas import asignaturas
 from data.crear_data import crear_data
 from data.conexion import ejecutar_consulta
+from data.scripts.scripts_asignaturas import listado_asignaturas
 from prettytable import PrettyTable
+from auxiliares.mensajes import sin_datos
 
-# READ
+def cargar_listado_asignaturas():
+    lista_asignaturas = ejecutar_consulta(listado_asignaturas)
+    if listado_asignaturas != None:
+        return lista_asignaturas
+
 def mostrar_listado_asignaturas():
     print()
     print('Listado de Asignaturas')
-    listado_asignaturas = ejecutar_consulta('SELECT id_asignatura,codigo_asig,nombre_asig FROM asignaturas')
     tabla_asignaturas = PrettyTable()
     tabla_asignaturas.field_names = ['Id','Código Asignatura','Nombre Asignatura']
-    for asignatura in listado_asignaturas:
-        tabla_asignaturas.add_row(asignatura) # type: ignore
-    print(tabla_asignaturas)
+    lista = cargar_listado_asignaturas()
+    if lista != None:
+        for asignatura in lista:
+            tabla_asignaturas.add_row(asignatura) # type: ignore
+        print(tabla_asignaturas)
+    else:
+        print(sin_datos)
 
 # READ
 def buscar_asignatura():
@@ -46,5 +55,3 @@ def indice_asignatura(busqueda):
 
 #     crear_data('asignaturas.py','asignaturas',asignaturas)
 #     mostrar_listado_asignaturas()
-
-mostrar_listado_asignaturas()

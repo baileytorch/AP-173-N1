@@ -9,3 +9,8 @@ manejo_notas/data/__pycache__/asignaturas.cpython-313.pyc
 manejo_notas/data/__pycache__/crear_data.cpython-313.pyc
 manejo_notas/data/__pycache__/conexion.cpython-313.pyc
 manejo_notas/auxiliares/__pycache__/data_conexion.cpython-313.pyc
+manejo_notas/auxiliares/__pycache__/mensajes.cpython-313.pyc
+manejo_notas/auxiliares/__pycache__/version.cpython-313.pyc
+manejo_notas/data/scripts/__pycache__/scripts_asignaturas.cpython-313.pyc
+manejo_notas/data/scripts/__pycache__/scripts_menu.cpython-313.pyc
+manejo_notas/negocio/__pycache__/negocio_asignaturas.cpython-313.pyc
