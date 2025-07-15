@@ -14,6 +14,6 @@
 #               Se define menú principal, cambiamos versión menor v1.1.0
 #               Se cambia el origen de datos desde archivo a DB cambio mayor v2.1.0
 #               Se agrega funcionalidad de docentes versión menor v2.2.0
+# 08.06.2025    Se modifica la DB para habilitar datos, correccion v2.2.1
 
-#version_actual = "1.1.0"
-version_actual = '2.2.0'
+version_actual = '2.2.1'
