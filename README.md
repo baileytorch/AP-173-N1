@@ -7,4 +7,6 @@
 <ul>
 <li>Versión de MysqlConnector para Python 3.11
 <p><code>pip install mysql-connector-python==8.0.33</code></p></li>
+<li>prettytable 3.16.0
+<p>pip install prettytable</p></li>
 </ul>
