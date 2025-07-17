@@ -1,4 +1,5 @@
 import mysql.connector
+from mysql.connector import Error
 from auxiliares.data_conexion import servidor, puerto, usuario, base_datos, contrasena
 
 
@@ -24,21 +25,35 @@ def leer_datos(consulta):
     if conexion and conexion.is_connected():
         cursor = conexion.cursor()
         if cursor != None:
-            cursor.execute(consulta)
-            resultado = cursor.fetchall()
-            cursor.close()
-            return resultado
+            try:
+                cursor.execute(consulta)
+                resultado = cursor.fetchall()
+                return resultado
+            except Error as error_ejecucion:
+                print(f'Ha ocurrido un error: {error_ejecucion.msg}')
+            finally:
+                cursor.close()
+                conexion.close()
         else:
             print('Ha ocurrido un error de comunicación')
-        conexion.close()
 
 
-# def insertar_datos(consulta, datos):
-#     cursor.execute(consulta, datos)
-#     id = cursor.lastrowid
-#     conexion.commit()
-#     cursor.close()
-#     conexion.close()
+def insertar_datos(consulta, datos):
+    conexion = generar_conexion()
+    if conexion and conexion.is_connected():
+        cursor = conexion.cursor()
+        if cursor != None:
+            try:
+                cursor.execute(consulta, datos)
+                conexion.commit()
+                id = cursor.lastrowid
+            except Error as error_ejecucion:
+                print(f'Ha ocurrido un error: {error_ejecucion.msg}')
+            finally:
+                cursor.close()
+                conexion.close()
+        else:
+            print('Ha ocurrido un error de comunicación')
 
 # cursor.execute('SELECT numero_opcion,opcion_menu FROM opciones_menu')
 # resultado = cursor.fetchall()

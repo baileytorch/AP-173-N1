@@ -3,7 +3,7 @@ from data.scripts.scripts_menu import script_menu_asignaturas, script_menu_princ
 from prettytable import PrettyTable
 from auxiliares.mensajes import salir, nombre_aplicacion, volver, invalido
 from auxiliares.version import version_actual
-from negocio.negocio_asignaturas import mostrar_listado_asignaturas
+from negocio.negocio_asignaturas import mostrar_listado_asignaturas, agregar_asignatura
 
 
 def menu_asignaturas():
@@ -22,7 +22,7 @@ def menu_asignaturas():
             if opcion_asignatura_usuario == '1':
                 mostrar_listado_asignaturas()
             elif opcion_asignatura_usuario == '2':
-                pass
+                agregar_asignatura()
             elif opcion_asignatura_usuario == '3':
                 pass
             elif opcion_asignatura_usuario == '4':
